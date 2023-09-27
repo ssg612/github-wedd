@@ -1,0 +1,61 @@
+---
+
+var { imageName } = Astro.props;
+
+---
+
+<div class="image-cover">
+   <div class="image-container">
+      <img src={imageName}>
+   </div>
+</div>
+<style>
+.image-container{
+   height: 0;
+   position: relative;
+}
+.image-cover{
+   background-image: url("/hero-min.jpg");
+   background-size: cover;
+}
+.image-container img{
+   position: absolute;
+   bottom: 1em;
+   left: 50%;
+   transform: translate(-50%, 0%);
+}
+/* phones */
+@media only screen and (max-width: 600px) {
+   .image-container{
+      padding: 100% 0% 100% 0%;
+   }
+   .image-container img{
+      width: 14em;
+   }
+   .image-cover{
+      background-position: 55% 50%;
+   }
+}
+/* tablets */
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+   .image-container{
+      padding: 0 0 70%;
+   }
+   .image-container img{
+      width: 10em;
+   }
+   .image-cover{
+      background-position: 50% 50%;
+   }
+}
+@media only screen and (min-width: 992px) {
+   .image-container{
+      padding: 0 0 44%;
+   }
+   .image-cover{
+      background-position: 50% 50%;
+   }
+}
+
+
+</style>

@@ -1,0 +1,200 @@
+---
+import HeaderLink from './HeaderLink.astro';
+
+const { pathname } = Astro.url;
+const isHome = './' === pathname || './' === pathname.replace(/\/$/, '');
+
+---
+<script is:inline>
+	window.addEventListener('scroll',() => {
+		if(window.scrollY > 50){
+			document.querySelector('header')?.classList.add('active');
+			document.querySelector('header nav')?.classList.remove('py-8');
+			document.querySelector('header nav')?.classList.add('py-5');
+		} else {
+			document.querySelector('header')?.classList.remove('active');
+			document.querySelector('header nav')?.classList.remove('py-5');
+			document.querySelector('header nav')?.classList.add('py-8');
+		}
+		
+	});
+
+</script>
+<script>
+	const toggleMenu: HTMLElement = document.querySelector('.nav-toggle') as HTMLElement;
+	const navMobile = document.querySelector('#nav-mobile');
+	const navMobileButton = document.querySelectorAll('#nav-mobile a');
+	const header = document.querySelector('header');
+	toggleMenu?.addEventListener('click',() => {
+		toggleMenu.classList.toggle('active');
+		navMobile?.classList.toggle('open');
+		header?.classList.toggle('open');
+	});
+
+	for (let i = 0; i < navMobileButton.length; i++) {
+		navMobileButton[i].addEventListener("click", function() {
+			toggleMenu?.click();
+		});
+	}
+</script>
+
+<nav id="nav-mobile" class:list={['flex-col items-center justify-center']} >
+	<HeaderLink href="#historia" class="text-[#A22879] hover:text-[#C850A0] font-medium">Nuestra Historia</HeaderLink>
+	<HeaderLink href="#album" class="text-[#A22879] hover:text-[#C850A0] font-medium">Album</HeaderLink>
+	<HeaderLink href="#evento" class="text-[#A22879] hover:text-[#C850A0] font-medium">Evento</HeaderLink>
+	<!-- <HeaderLink href="#regalos">Mesa de Regalos</HeaderLink> -->
+	<HeaderLink href="#direccion" class="text-[#A22879] hover:text-[#C850A0] font-medium">¿Cómo llegar?</HeaderLink>
+	<HeaderLink href="#asistencia" class="text-[#A22879] hover:bg-white hover:text-[#1c365399] border-white border-2 focus:ring-4 focus:outline-none font-medium rounded-full text-m px-5 py-2.5 text-center mr-2 mb-2">
+	<span class="px-3 py-2.5">Confirmar asistencia</span>
+	</HeaderLink>
+</nav>
+<header>
+	<nav class:list={['lg:hidden flex items-center justify-between text-sm py-8']} >
+		<h2 class="mx-5"><a href="/"><img src="/logo-svg.svg" width="73px" ></a></h2>
+		<button type="button" class="nav-toggle mx-5 scale-150">
+			<span></span>
+		</button>
+	</nav>
+	<nav id="nav-main" class:list={['lg:flex lg:items-center lg:justify-around text-sm lg:py-8']} >
+		<h2 class=""><a href="/"><img src="/logo-svg.svg" width="73px" ></a></h2>
+		<div class="primary-nav">
+			<HeaderLink href="#historia" class="text-[#A22879] hover:text-[#C850A0] font-medium">Nuestra Historia</HeaderLink>
+			<HeaderLink href="#album" class="text-[#A22879] hover:text-[#C850A0] font-medium">Álbum</HeaderLink>
+			<HeaderLink href="#evento" class="text-[#A22879] hover:text-[#C850A0] font-medium">Evento</HeaderLink>
+			<!-- <HeaderLink href="#regalos">Mesa de Regalos</HeaderLink> -->
+			<HeaderLink href="#direccion" class="text-[#A22879] hover:text-[#C850A0] font-medium">¿Cómo llegar?</HeaderLink>
+		</div>
+		<!-- <div class="text-[#A22879] hover:text-[#C850A0] font-medium border-1">
+		<span class="px-6 py-5" id="countdown"></span>
+		</div> -->
+		<div class="member-actions">
+			<HeaderLink href="#asistencia" class="text-[#A22879] hover:bg-white hover:text-[#1c365399] border-white border-2 focus:ring-4 focus:outline-none font-medium rounded-full text-m px-5 py-2.5 text-center mr-2 mb-2">
+			<span class="px-3 py-2.5">Confirmar asistencia</span>
+			</HeaderLink>
+		</div>
+	</nav>
+</header>
+
+<style>
+	@media only screen and (max-width: 992px){
+		#nav-main{
+			display: none;
+		}
+	}
+	#nav-mobile{
+		display: none;
+	}
+	#nav-mobile.open a{
+		margin-top: 1.5em;
+		margin-bottom: 1.5em;
+	}
+	#nav-mobile.open {
+		display: flex;
+		position: fixed;
+		background-color: #000;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		visibility: hidden;
+		opacity: 0;
+		-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+		transition: opacity 0.5s, visibility 0s 0.5s;
+	}
+	#nav-mobile.open {
+		visibility: visible;
+		opacity: .8;
+		-webkit-transition: opacity .5s;
+		transition: opacity .5s;
+	}
+	header {
+		margin: 0;
+		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		position: fixed;
+		top:0;
+		width: 100%;
+		z-index: 2;
+		transition: all 250ms ease-in-out;
+	}
+	header.active{
+		background-color: #40b88f;
+		border-bottom: medium;
+		opacity: 0.85;
+	}
+	header.open{
+		background-color: transparent!important;
+	}
+	header.active .member-actions a{
+		color: #A22879;
+		border-color: #A22879;
+	}
+	header.active .member-actions a:hover{
+		color: #40b88f;
+		background-color: #C850A0;
+	}
+	h2 {
+		font-size: 1em;
+	}
+	.primary-nav a.active{
+		border-color: transparent;
+		border-width: 2px;
+		--tw-border-opacity: 1;
+		border-bottom-color: rgb(255 255 255 / var(--tw-border-opacity));
+	}
+	.nav-toggle {
+		top: 0;
+		right: 15px;
+		z-index: 4;
+		padding: 10px 35px 16px 0;
+		cursor: pointer
+	}
+	.nav-toggle:focus {
+		outline: none
+	}
+	.nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 35px;
+		height: 3px;
+		-moz-border-radius: 1px;
+		-webkit-border-radius: 1px;
+		border-radius: 1px;
+		background: #fff;
+		cursor: pointer
+	}
+	.nav-toggle span:before {
+		top: -10px
+	}
+	.nav-toggle span:after {
+		bottom: -10px
+	}
+	.nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
+		-moz-transition: all 300ms ease-in-out;
+		-o-transition: all 300ms ease-in-out;
+		-webkit-transition: all 300ms ease-in-out;
+		transition: all 300ms ease-in-out
+	}
+	.nav-toggle.active span {
+		background-color: transparent
+	}
+	.nav-toggle.active span:before, .nav-toggle.active span:after {
+		top: 0
+	}
+	.nav-toggle.active span:before {
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg)
+	}
+	.nav-toggle.active span:after {
+		top: 10px;
+		-moz-transform: translatey(-10px) rotate(-45deg);
+		-ms-transform: translatey(-10px) rotate(-45deg);
+		-o-transform: translatey(-10px) rotate(-45deg);
+		-webkit-transform: translatey(-10px) rotate(-45deg);
+		transform: translatey(-10px) rotate(-45deg)
+	}
+</style>

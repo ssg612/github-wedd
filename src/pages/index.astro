@@ -1,0 +1,50 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import ImageHeader from '../layouts/ImageHeader.astro';
+import Historia from '../components/Historia.astro';
+import Evento from '../components/Evento.astro';
+import Intro from '../components/Intro.astro';
+import Direccion from '../components/Direccion.astro'
+import Asistencia from '../components/Asistencia.astro'
+import Album from '../components/Album.astro';
+import Contador from '../components/Contador.astro';
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<audio controls autoplay class="hidden"><source src="/onelastkiss.mp3" type="audio/mpeg"></audio>
+	</head>
+	<body>
+		<ImageHeader imageName="/logo-svg.svg" />
+		<Header title={SITE_TITLE} />
+		<main>
+			<Intro class="lg:mx-40 my-5"/>
+			<Historia class="lg:mx-40 my-5"/>
+			<Contador />
+			<Album class="lg:mx-40 my-5"/>
+			<Evento class="lg:mx-40 my-5"/>
+			<Direccion class="lg:mx-10 my-5"/>
+			<Asistencia class="lg:mx-60 my-10"/>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	@media only screen and (min-width: 992px){
+		main section{
+			scroll-margin-top: 8em;
+		}
+	}
+	@media only screen and (max-width: 992px){
+		main section{
+			scroll-margin-top: 7em;
+		}
+	}
+</style>

@@ -1,0 +1,42 @@
+---
+const {class: className, ...props } = Astro.props;
+const imagesH = await Astro.glob('/public/galeria/horizontal/*.jpg')
+const imagesV = await Astro.glob('/public/galeria/vertical/*.jpg')
+---
+
+
+<section id="album" class:list={[className]} {...props}>
+	<h3 class="text-center font-bold my-10 tracking-widest">Álbum</h3>
+	<p>Fotos de los novios</p>
+	<ul class="carousel flex items-center my-5">
+		{imagesH.map((image) => (
+			<li class="item mx-5 max-w-xs sm:max-w-sm"><img src={image.default.src} /></li>
+		))}
+	</ul>
+	<ul class="carousel flex items-center my-5">
+		{imagesV.map((image) => (
+			<li class="item mx-5 max-w-xs"><img src={image.default.src} /></li>
+		))}
+	</ul>
+</section>
+
+<style>
+	p{
+		text-align: center;
+		color: #1c365399;
+	}
+	.carousel{
+		overflow: auto;
+		scrollbar-width: none;
+		scroll-snap-type: x mandatory;
+		scroll-padding: 0 24px;
+	}
+	.carousel::-webkit-scrollbar{
+		display:none;
+	}
+	.carousel .item{
+		scroll-snap-align: start;
+		margin-right: 5px;
+		flex-shrink: 0;
+	}
+</style>

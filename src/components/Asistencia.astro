@@ -1,0 +1,64 @@
+---
+import connectToMongoDB from '../api/mongodb.js';
+export const db = await connectToMongoDB();
+
+import FormInput from './FormInput.astro';
+
+if (Astro.request.method === "POST") {
+	try {
+		
+		const invitadosCollection = db.collection('invitados');
+
+		const data = await Astro.request.formData();
+
+		interface guestModel {
+			nombre: string;
+			numero_invitados: number;
+			codigo_seguridad: string;
+			confirmacion: boolean;
+		}
+		var objGuest = {} as guestModel;
+
+		objGuest.nombre = data.get("nombre") as string;
+		objGuest.numero_invitados = Number(data.get("numero_invitados")) as number;
+		objGuest.codigo_seguridad = data.get("codigo_seguridad") as string;
+
+		//UPDATE
+		const filter = { codigo: objGuest.codigo_seguridad };
+		const update = { $set: { confirmados: objGuest.numero_invitados } };
+		await invitadosCollection.updateOne(filter, update).catch((error) => {
+			console.log(error);
+		});
+
+	} catch (error) {
+		if (error instanceof Error) {
+			console.error(error.message);
+		}
+	}
+}
+
+const {class: className, ...props } = Astro.props;
+---
+
+<section id="asistencia" class:list={[className]} {...props}>
+	<h3 class="text-center font-bold my-5 tracking-widest">Confirmar Asistencia (RSVP)</h3>
+	<p class="text-center my-10">Nos gustaría tener tu confirmación antes del 15 de Noviembre.</p>
+	<div class="lg:mx-60 box">
+		<form id="rsvp-form" method="post" class="text-center flex items-center flex-col p-10">
+			<FormInput placeHolder="Nombre/Familia" inputName="nombre" iconType="person" />
+			<FormInput placeHolder="Número de acompañantes" inputName="numero_invitados" iconType="group" inputType="number" />
+			<FormInput placeHolder="Código de invitado" inputName="codigo_seguridad" iconType="lock" />
+			<button type="submit" class="text-white bg-[#A22879] border-[#A22879] border-2 font-medium rounded-full text-m px-5 py-2.5 text-center mr-2 mb-2">Confirmar</button>
+		</form>
+	</div>
+</section>
+
+<style>
+	form{
+		color: #A22879;
+	}
+	p{
+		color: #1c365399;
+	}
+
+</style>

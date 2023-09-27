@@ -1,0 +1,34 @@
+---
+const {class: className, ...props } = Astro.props;
+---
+<section id="historia" class:list={[className]} {...props}>
+	<h3 class="font-bold my-10 text-center tracking-widest">Nuestra Historia</h3>
+	<article class="flex items-center">
+		<img src="/histkarla.jpg" />
+		<p class="text-base text-center m-5 leading-8">
+			Nos conocimos hace ya tiempo, ingresamos al mismo salón de la preparatoria y ya han pasado casi quince años de eso, desde los primeros días nos llevamos muy bien por nuestro gusto en comun por el anime y poco a poco nos hicimos mejores amigos al compartir, salidas, trabajos en equipo y estudio, esos sentimientos de cariño el uno por el otro fueron creciendo y sabíamos que era más que amistad, se convirtio en amor, y así comenzó nuestro noviazgo, a lo largo de estos 12 años juntos hemos pasamos por muchas cosas qué nos hicieron crecer como personas y como pareja, y sabemos que queremos tener muchas más historias juntos.
+		</p>
+		<img src="/DSD_0214.jpg" />
+	</article>
+</section>
+
+<style>
+	p{
+		max-width: 50%;
+		color: #1c365399;
+	}
+	img {
+		max-width: 25%;
+	}
+	@media only screen and (max-width: 600px) {
+		article {
+			flex-direction: column
+		}
+		img {
+			max-width: 80%;
+		}
+		p{
+			max-width: 100%;
+		}
+	}
+</style>

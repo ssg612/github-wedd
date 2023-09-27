@@ -1,0 +1,21 @@
+---
+const {class: className, ...props } = Astro.props;
+---
+
+<section id="invitacion" class:list={[className]} {...props}>
+	<h3 class="font-bold text-center my-5 tracking-widest">Nos casamos</h3>
+	<br> 
+	<p class="text-center">16 de Diciembre de 2023</p>
+	<br>
+	<p class="text-base text-center mx-5 leading-8">
+		¡Celebramos el amor en una fecha mágica! Es un honor para nosotros invitarlos a nuestra boda, que se llevará a cabo el sábado, 16 de diciembre del 2023.
+		Este día tan especial marcará el comienzo una nueva etapa juntos, y nos encantaría que se unieran a nosotros en esta ocasión llena de alegría y felicidad.
+		Su presencia es invaluable para nosotros, ya que cada uno de ustedes ha formado parte de nuestra historia y ha sido testigo de nuestro crecimiento como pareja.
+	</p>
+</section>
+
+<style>
+	p{
+		color: #1c365399;
+	}
+</style>

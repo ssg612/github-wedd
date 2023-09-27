@@ -1,0 +1,230 @@
+[
+  {
+    "codigo": "69735ALI",
+    "personas": [
+      "ALICIA COLIN ",
+      "MANUEL DE SANTIAGO",
+      "JESSICA DE SANTIAGO",
+      "MARTHA DE SANTIAGO",
+      "EDUARDO DURAN"
+    ],
+    "confirmados": 0
+  },
+  {
+    "codigo": "61676BEA",
+    "personas": [
+      "BEATRIZ COLIN",
+      "NOEL MORALES",
+      "DANIEL MORALES",
+      "LAURA MORALES",
+      "JESUS MORALES"
+    ],
+    "confirmados": 0
+  },
+  {
+    "codigo": "18601KAR",
+    "personas": ["KAREN COLIN", "FANNY  COLIN", "ALONDRA COLIN"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "69209ISM",
+    "personas": ["ISMAEL COLIN", "HANA COLIN"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "82540MAR",
+    "personas": ["MARCELO COLIN", "MARCELO +1"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "70370ESP",
+    "personas": ["ESPERANZA COLIN", "CLARA COLIN"],
+    "confirmados": 0
+  },
+  { "codigo": "75114JES", "personas": ["JESUS COLIN"], "confirmados": 0 },
+  {
+    "codigo": "57849LUI",
+    "personas": ["LUIS MIGUEL DURAN", "LUIS MIGUEL +1"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "74313ROD",
+    "personas": ["RODOLFO NAVA", "ITZEL AVILA"],
+    "confirmados": 0
+  },
+  { "codigo": "19945PAB", "personas": ["PABLO SUAREZ"], "confirmados": 0 },
+  {
+    "codigo": "2444KAR",
+    "personas": ["KAREN ESQUIVEL", "RAFAEL", "ALICIA RAFA"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "21734RAF",
+    "personas": ["RAFAEL", "ALICIA RAFA"],
+    "confirmados": 0
+  },
+  { "codigo": "62743ALE", "personas": ["ALEJANDO MARTINEZ"], "confirmados": 0 },
+  {
+    "codigo": "99807HER",
+    "personas": ["HERNAN HERNANDEZ", "HERNAN HERNANDEZ +1"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "51401RIC",
+    "personas": ["RICARDO CAMACHO", "GABRIELA ALDECO"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "82371JOS",
+    "personas": ["JOSE PERUSQUIA", "SABRINA"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "80982ADR",
+    "personas": ["ADRIAN ROCA", "DIANA"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "10829FAB",
+    "personas": ["FABIOLA GONZALEZ", "FABIOLA GONZALEZ +1"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "914SAU",
+    "personas": [
+      "SAUL COLIN",
+      "VERONICA COLIN",
+      "BRYANT COLIN",
+      "CASSANDRA COLIN ",
+      "THIAGO COLIN"
+    ],
+    "confirmados": 0
+  },
+  {
+    "codigo": "19017RUB",
+    "personas": ["RUBEN RULAS", "LUZ ELENA"],
+    "confirmados": 0
+  },
+  { "codigo": "32741ALD", "personas": ["ALDO ", "YESSICA"], "confirmados": 0 },
+  {
+    "codigo": "91266SUS",
+    "personas": ["SUSANA PIÑERO", "MARTIN BUSTOS"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "71969ERI",
+    "personas": ["ERIK BUSTOS", "JENNIFER RUBIO"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "22609MAR",
+    "personas": ["MARU PIÑERO", "FERNANDO ALCOCER"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "60092ANG",
+    "personas": ["ANGELICA MELENDEZ", "FRANCISCO LINARES", "PAQUITO LINARES"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "3383FER",
+    "personas": ["FERNANDA LINARES", "MATIAZ BERMUDEZ"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "35363ANG",
+    "personas": ["ANGIE LINARES", "ANA"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "39075QUE",
+    "personas": ["QUETZALLI NAVARRETE"],
+    "confirmados": 0
+  },
+  { "codigo": "9929JOR", "personas": ["JORGE ESQUEDA"], "confirmados": 0 },
+  { "codigo": "44901GRI", "personas": ["GRIS MORALES"], "confirmados": 0 },
+  {
+    "codigo": "45547SAR",
+    "personas": ["SARA ", "LORENA ", "FABIAN SANTA MARIA"],
+    "confirmados": 0
+  },
+  { "codigo": "56603LOR", "personas": ["LORENA"], "confirmados": 0 },
+  {
+    "codigo": "56620FAB",
+    "personas": ["FABIAN SANTA MARIA", "ITZEL RODRIGUEZ"],
+    "confirmados": 0
+  },
+  { "codigo": "15459BET", "personas": ["BETO MONTES"], "confirmados": 0 },
+  {
+    "codigo": "24748DAN",
+    "personas": ["DANIELA SERVIN", "NACHO VAZQUEZ MELLADO"],
+    "confirmados": 0
+  },
+  { "codigo": "90383ANG", "personas": ["ANGELICA PADILLA"], "confirmados": 0 },
+  {
+    "codigo": "75599DIE",
+    "personas": ["DIEGO MEDINA", "SAMANTHA ESCOBEDO"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "25072ANA",
+    "personas": ["ANA LILIA VALENCIA"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "29077ALB",
+    "personas": [
+      "ALBERTO VAZQUEZ MELLADO",
+      "CECILIA GONZALEZ",
+      "MARIANA SANTIESTEBAN"
+    ],
+    "confirmados": 0
+  },
+  {
+    "codigo": "57871MAR",
+    "personas": ["MARIANA SANTIESTEBAN", " MARIANA S +1"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "65462ALI",
+    "personas": ["ALICIA PIÑERO", "NAYELI TELLEZ"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "78875KAR",
+    "personas": ["KAREN TELLEZ", "LUIS KAREN"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "51479YOL",
+    "personas": ["YOLANDA PIÑERO", "XIMENA FRANCO", "XIMENA FRANCO 1"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "17806CRI",
+    "personas": ["CRISTIAN FRANCO", "CRISTIAN FRANCO 1"],
+    "confirmados": 0
+  },
+  {
+    "codigo": "84605VAL",
+    "personas": ["VALERIA FRANCO", "VALERIA FRANCO 1"],
+    "confirmados": 0
+  },
+  { "codigo": "10484HER", "personas": ["HERIBERTO AGUILAR"], "confirmados": 0 },
+  {
+    "codigo": "55123ART",
+    "personas": ["ARTURO LEON", "JORGE BUSTOS", "FERNANDO BUSTOS"],
+    "confirmados": 0
+  },
+  { "codigo": "67031JOR", "personas": ["JORGE BUSTOS"], "confirmados": 0 },
+  { "codigo": "2517FER", "personas": ["FERNANDO BUSTOS"], "confirmados": 0 },
+  {
+    "codigo": "64865ADR",
+    "personas": ["ADRIANA BUSTOS", "RENATA BUSTOS", "ALAN BUSTOS"],
+    "confirmados": 0
+  },
+  { "codigo": "85272ALF", "personas": ["ALFONSO DUARTE"], "confirmados": 0 },
+  { "codigo": "50551MON", "personas": ["MONSEVALDEZ"], "confirmados": 0 },
+  { "codigo": "65537JAN", "personas": ["JANIN RODRIGUEZ"], "confirmados": 0 },
+  { "codigo": "50901MAR", "personas": ["MARTHA HERNANDEZ"], "confirmados": 0 }
+]

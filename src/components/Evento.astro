@@ -1,0 +1,50 @@
+---
+const {class: className, ...props } = Astro.props;
+import EventoCard from '../layouts/EventoCard.astro';
+---
+
+<section id="evento" class:list={[className]} {...props}>
+	<h3 class="font-bold my-10 text-center tracking-widest">Agenda del Evento</h3>
+	<div class="grid grid-cols-2 gap-4">
+	   <div>
+			<EventoCard title="Recepción" time="4:40 pm - 5:20 pm">
+				Habrá valet parking en la entrada de la terraza, los autos se quedan en el estacionamiento del mismo lugar.
+				Se les asignará su mesa al entrar para que puedan dejar pertenencias etc.
+				Una vez asignada, favor de pasar al lugar del evento que será el jardín a un costado de la entrada.
+			</EventoCard>
+			<EventoCard title="Ceremonia" time="5:30 pm - 6:10 pm">
+				La ceremonia es el corazón de nuestro día especial. Por lo cual, estará llena de amor y significado. Será un momento conmovedor y único que marcará el comienzo de una vida juntos. 
+			</EventoCard>
+			<EventoCard title="Fotografías con los esposos" time="6:20 pm - 6:50 pm">
+				Después de la ceremonia, habrá la oportunidad de capturar recuerdos invaluables. Sonríe para la cámara y sé parte nuestra historia de amor. ¡Las fotos serán un tesoro para toda la vida!
+			</EventoCard>
+	   </div>
+	   <div>
+			<EventoCard title="Comida" time="7:10 pm - 8:00 pm">
+				¡Es hora de saciar tu apetito!  Disfruta de un festín y comparte conversaciones animadas con otros invitados mientras celebramos.
+				La comida será tipo buffet. Se les avisará el orden por mesa en el que podrán pasar a la barra de alimentos.
+			</EventoCard>
+			<EventoCard title="Vals" time="8:20 pm - 8:50 pm">
+			La pista de baile se abrirá con el vals de los recién casados que mostrarán su amor en un baile lleno de emoción. Únete a ellos y celebra este momento especial con una alegre danza.
+			</EventoCard>
+			<EventoCard title="Fiesta" time="9:00 pm - 1:00 am">
+			La noche culminará con una fiesta llena de diversión y baile. La pista de baile estará abierta para que todos disfruten de la música. ¡Bailemos juntos y celebremos la felicidad hasta altas horas de la noche!
+			</EventoCard>
+		</div>
+	</div>
+	<div>
+		<h3 class="font-bold my-10 text-center tracking-widest">Código de vestimenta</h3>
+		<p class="text-center">
+		Formal: se reserva colores claros y blanco en vestidos y trajes. Prepara tu mejor atuendo de fiesta y únete a nosotros para disfrutar de una noche inolvidable.
+		</p>
+	</div>
+<section/>
+<style>
+	h3{
+		font-weight: 700;
+	}
+	p{
+		color: #1c365399;
+	}
+	
+</style>

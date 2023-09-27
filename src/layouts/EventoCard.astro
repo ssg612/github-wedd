@@ -1,0 +1,37 @@
+---
+
+const { title, time } = Astro.props;
+
+---
+
+<article>
+	<h5 class="my-3">
+		<span>{title}</span>
+		<span class="time">{time}</span>
+	</h5>
+	<p><slot /></p>
+</article>
+
+<style>
+	h5{
+		font-size: 15px;
+		color: #3d4351;
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+	.time{
+		font-size: 13px;
+		font-style: italic;
+		text-transform: lowercase;
+		color: rgba(28,54,83,.6);
+	}
+	span{
+		margin: 0 0.5em 0 0;
+	}
+	p{
+		font-size: 15px;
+		line-height: 29px;
+		color: rgba(28,54,83,.6);
+		padding-bottom: 20px;
+	}
+</style>

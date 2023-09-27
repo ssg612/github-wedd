@@ -1,0 +1,66 @@
+<script>
+var countDownDate = new Date("Dec 16, 2023 16:45").getTime();
+
+var x = setInterval(function() {
+
+	var now = new Date().getTime();
+
+	var distance = countDownDate - now;
+
+	// Time calculations for days, hours, minutes and seconds
+	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+	// // Output the result in an element with id="countdown1"
+	// const countdown : HTMLElement = document.getElementById('countdown') as HTMLElement;
+	// countdown.innerHTML = "Faltan: " + days + " días " + hours + " horas " + minutes + " minutos " + seconds + " segundos ";
+
+	const countDays : HTMLElement = document.getElementById('cd-dias') as HTMLElement
+	countDays.innerHTML = days.toString();
+	const countHours : HTMLElement = document.getElementById('cd-horas') as HTMLElement
+	countHours.innerHTML = hours.toString();
+	const countMinutes : HTMLElement = document.getElementById('cd-minutos') as HTMLElement
+	countMinutes.innerHTML = minutes.toString();
+	const countSeconds : HTMLElement = document.getElementById('cd-segundos') as HTMLElement
+	countSeconds.innerHTML = seconds.toString();
+
+	// If the count down is over, write some text 
+	// if (distance < 0) {
+	// 	clearInterval(x);
+	// 	countdown.innerHTML = "FELICIDADES A LOS NOVIOS";
+	// }
+}, 1000);
+</script>
+
+<div class="text-center p-5 bg-[#A22879] text-white lg:mx-80 lg:my-20">
+	<p class="text-xl">Guarda la fecha!</p>
+	<h2 class="my-3 text-3xl font-bold text-white">Nos casamos en</h2>
+	<div class="flex justify-around my-5">
+		<article class="flex flex-col items-center">
+			<span class="countdown font-mono text-6xl">
+				<span id="cd-dias"></span>
+			</span>
+			<p>Dias</p>
+		</article>
+		<article class="flex flex-col items-center">
+			<span class="countdown font-mono text-6xl">
+				<span id="cd-horas"></span>
+			</span>
+			<p>Horas</p>
+		</article>
+		<article class="flex flex-col items-center">
+			<span class="countdown font-mono text-6xl">
+				<span id="cd-minutos"></span>
+			</span>
+			<p>Minutos</p>
+		</article>
+		<article class="flex flex-col items-center">
+			<span class="countdown font-mono text-6xl">
+				<span id="cd-segundos"></span>
+			</span>
+			<p>Segundos</p>
+		</article>
+	</div>
+</div>
